@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { BsGeo, BsPeople } from "react-icons/bs"
+import { BsChatDots, BsGeo, BsPeople } from "react-icons/bs"
 import Layout from "../components/Layout"
 import slugify from "slugify"
 import SEO from "../components/SEO"
@@ -12,6 +11,7 @@ const ExerciseTemplate = ({ data }) => {
     title,
     videoTitle,
     videoLink,
+    chineseName,
     contributor,
     contributorLink,
     venue,
@@ -38,16 +38,11 @@ const ExerciseTemplate = ({ data }) => {
               <p>{description}</p>
               {/* icons below */}
               <div className="recipe-icons">
-                {/* <article>
-                  <BsClock />
-                  <h5>Prep time</h5>
-                  <p>{prepTime}min</p>
-                </article> */}
-                {/* <article>
-                  <BsClockHistory />
-                  <h5>Cook time</h5>
-                  <p>{cookTime}min</p>
-                </article> */}
+                <article>
+                  <BsChatDots />
+                  <h5>中文名</h5>
+                  <p>{chineseName}</p>     
+                </article>
                 <article>
                   <BsPeople />
                   <h5>Contributor</h5>
@@ -101,12 +96,14 @@ const ExerciseTemplate = ({ data }) => {
                   )
                 })}
               </div>
-              <div>
+              <div className="tools-list">
                 <h4>tools</h4>
                 {tools.map((item, index) => {
                   return (
-                    <p key={index} className="single-tool">
-                      {item}
+                    <p className="single-tool">
+                      <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
+                      {item.name}
+                    </a>
                     </p>
                   )
                 })}
@@ -125,6 +122,7 @@ export const query = graphql`
       title
       videoTitle
       videoLink
+      chineseName
       contributor
       contributorLink
       venue
@@ -133,7 +131,10 @@ export const query = graphql`
         keys
         tags
         instructions
-        tools
+        tools {
+          name
+          link
+        }          
       }
       description {
         description

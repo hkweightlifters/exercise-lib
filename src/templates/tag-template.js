@@ -30,9 +30,7 @@ export const query = graphql`
         id
         title
         contributor
-        contributorLink
         venue
-        venueLink
         content {
           tags
         }

@@ -11,9 +11,7 @@ const query = graphql`
       featured
       title
       contributor
-      contributorLink
       venue
-      venueLink
       content {
         tags
       }

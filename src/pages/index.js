@@ -24,7 +24,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-        {/* <AllRecipes /> */}
         <AllExercises />
       </main>
     </Layout>

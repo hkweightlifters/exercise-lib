@@ -20,9 +20,6 @@ const ExercisesList = ({ exercises = [] }) => {
               <h5>{title}</h5>
               <p>By: {contributor} | At: {venue}</p>
             </Link>
-            {/* <a href={contributorLink} target="_blank" rel="noopener noreferrer">
-              {contributor}
-            </a> */}
           </div>
         )
       })}

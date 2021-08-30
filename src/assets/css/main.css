@@ -582,10 +582,17 @@ form > *:last-child {
   font-weight: bold;
 }
 .tags-list a {
+  font-size:1.25em;
+  text-align: center;
   text-transform: capitalize;
   display: block;
   color: var(--grey-800);
   transition: var(--transition);
+}
+@media screen and (min-width: 992px) {
+  .tags-list a {
+    text-align: left;
+  }
 }
 .tags-list a:hover {
   color: var(--primary-500);
@@ -723,7 +730,7 @@ form > *:last-child {
 }
 .recipe-icons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 2rem 0;
   line-height: normal;
@@ -751,7 +758,7 @@ form > *:last-child {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 0.7em;
+  font-size: 0.85em;
   font-weight: 600;
 }
 .recipe-tags a {

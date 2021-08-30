@@ -25,7 +25,8 @@ const About = ({ data: { allContentfulExercise: { nodes: exercises } } }) => {
             alt="Squat"
             placeholder="tracedSVG"
             className="about-img"
-          />        </section>
+          />
+        </section>
         <section className="featured-recipes">
           <h5>Featured Exercises</h5>
           <ExercisesList exercises={exercises} />
@@ -46,7 +47,7 @@ export const query = graphql`
         featured
         title
         contributor
-        contributorLink
+        venue
         content {
           tags
         }

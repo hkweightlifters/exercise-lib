@@ -6,7 +6,7 @@ const TagsList = ( {exercises} ) => {
   const newTags = setupTags(exercises)
   return (
     <div className="tag-container">
-      <h4>Tags</h4>
+      <h4>Filter by Tags</h4>
       <div className="tags-list">
         {newTags.map((tag, index)  => {
           const [text, value] = tag
