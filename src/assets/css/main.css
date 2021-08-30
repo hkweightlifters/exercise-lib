@@ -591,6 +591,7 @@ form > *:last-child {
 }
 @media screen and (min-width: 992px) {
   .tags-list a {
+    font-size:0.9em;
     text-align: left;
   }
 }
