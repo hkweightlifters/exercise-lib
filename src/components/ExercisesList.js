@@ -12,7 +12,7 @@ const ExercisesList = ({ exercises = [] }) => {
         const slug = slugify(title, { lower: true })
         return (
           <div>
-            <Link key={id} to={`/${slug}`} className="recipe">
+            <Link key={id} to={`/exercises/${slug}`} className="recipe">
               <GatsbyImage
                 image={pathToImage}
                 className="recipe-img"
