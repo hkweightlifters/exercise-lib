@@ -10,6 +10,7 @@ const query = graphql`
       id
       featured
       title
+      chineseName
       contributor
       venue
       content {

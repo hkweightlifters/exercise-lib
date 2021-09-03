@@ -1,6 +1,6 @@
 export const menuData = [
-  { title: "Home", link: "/" },
-  { title: "Exercises", link: "/exercises" },
-  { title: "Tags", link: "/tags" },
-  { title: "About", link: "/about" },
+  { title: "主頁 Home", link: "/" },
+  { title: "動作 Exercises", link: "/exercises" },
+  { title: "標簽 Tags", link: "/tags" },
+  { title: "願景 About", link: "/about" },
 ]

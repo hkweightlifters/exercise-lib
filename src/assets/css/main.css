@@ -423,7 +423,7 @@ form > *:last-child {
     padding: 0;
     border-top: none;
     margin-right: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .contact-link {
     width: 100%;
@@ -561,7 +561,6 @@ form > *:last-child {
   display: grid;
   gap: 2rem 1rem;
 }
-
 .recipes-list {
   display: grid;
   gap: 2rem 1rem;
@@ -580,6 +579,14 @@ form > *:last-child {
 .tags-container h4 {
   margin-bottom: 0.5rem;
   font-weight: bold;
+}
+.tag-container h4 {
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .tag-container h4 {
+    text-align: left;
+  }
 }
 .tags-list a {
   font-size:1.25em;
@@ -617,6 +624,12 @@ form > *:last-child {
   line-height: 1;
   color: var(--grey-800);
   margin-top: 0.5rem;
+}
+.recipe svg {
+  max-height: 1.5em;
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
 }
 @media screen and (min-width: 576px) {
   .recipes-list {

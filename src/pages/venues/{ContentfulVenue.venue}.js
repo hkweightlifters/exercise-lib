@@ -13,49 +13,44 @@ const VenueTemplate = ({ data }) => {
     venue,
     venueLink,
     longLat,
-    description: { description }
+    description: { description },
+    content
   } = data.contentfulVenue
 
   const { lat, lon } = longLat
+  const { tags, cnAddress, enAddress } = content
 
   return (
     <Layout>
       <SEO title={venue} description={description} />
       <main className="page">
-      <div className="recipe-page">
+        <div className="recipe-page">
           {/* hero */}
           <section className="recipe-hero">
-            <GoogleMap location={ {venue, lon, lat} }/>
+            <GoogleMap location={{ venue, lon, lat }} />
             <article className="recipe-info">
               <h2>{venue}</h2>
               <p>{description}</p>
-              {/* icons below */}
-              <div className="recipe-icons">
-                <article>
-                  <BsGeo />
-                  <h5>Venue</h5>
-                  <a href={venueLink} target="_blank" rel="noopener noreferrer">
-                    {venue}
-                  </a>                
-                </article>
-                <article>
-                  <BsGeo />
-                  <h5>Venue</h5>
-                  <a href={venueLink} target="_blank" rel="noopener noreferrer">
-                    {venue}
-                  </a>                
-                </article>
-                <article>
-                  <BsGeo />
-                  <h5>Venue</h5>
-                  <a href={venueLink} target="_blank" rel="noopener noreferrer">
-                    {venue}
-                  </a>                
-                </article>
-              </div>
-            </article>
-           </section> 
-          </div>  
+              <h4>地址 | Address</h4>
+              {cnAddress.map((line, index) => {
+                return (
+                  <div className="addressContainer">
+                    <span key={index}>
+                      {line}
+                    </span>
+                  </div>)
+              })}
+              {enAddress.map((line, index) => {
+                return (
+                  <div className="addressContainer">
+                    <span key={index}>
+                      {line}
+                    </span>
+                  </div>)
+              })}
+            </article>  
+          </section>
+        </div>
       </main>
     </Layout>
   )
@@ -73,6 +68,11 @@ export const query = graphql`
       }
       description {
         description
+      }
+      content {
+        tags
+        cnAddress
+        enAddress
       }
     }
   }
