@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.lib.hkweightlifters.com">
-    <img alt="HKWLERS" src="https://cdn.shopify.com/s/files/1/0269/6246/0774/files/2_180x.png" width="60" />
+    <img alt="HKWLERS" src="https://cdn.shopify.com/s/files/1/0269/6246/0774/files/2_180x.png" width="120" />
   </a>
 </p>
 <h1 align="center">
