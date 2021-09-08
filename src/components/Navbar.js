@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby' 
-import { FiAlignJustify } from "react-icons/fi"
-// import { GiWeightLiftingDown } from "react-icons/gi"
+import { FiAlignJustify, FiShoppingCart } from "react-icons/fi"
+import * as Icons from "react-icons/bs"
 import logo from "../assets/images/logo.svg"
 import { menuData } from "../assets/data/menuData"
+import styled from 'styled-components'
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -19,20 +20,34 @@ const Navbar = () => {
           </button>
         </div>
         <div className={show ? "nav-links show-links" : "nav-links"}>
-          {menuData.map((item, index) => (
+          {menuData.map((item, index) => {
+            const { [item.icon]:Icon } = Icons 
+            return (
             <Link to={item.link} key={index} className="nav-link" activeClassName="active-link">
-              {item.title}
+              <Wrapper><Icon />{item.title} </Wrapper>
             </Link>
-          ))}
+            )
+
+          })}
           <div className="nav-link contact-link">
-            <Link to="/contact" className="btn">
-              Contact Us
-            </Link>
+            {/* <Link to="/contact" className="btn"> */}
+            <a href="https://hkweightlifters.com/" target="_blank" rel="noopener noreferrer" className="btn">
+              <Wrapper><FiShoppingCart /> Shop </Wrapper>
+            </a>  
+          {/* </Link> */}
           </div>
         </div>
       </div>
     </nav>
   )
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem
+`
 
 export default Navbar

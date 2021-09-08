@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { BsChatDots, BsGeo, BsPeople } from "react-icons/bs"
+import { BsTagFill, BsGeo, BsFillPersonFill } from "react-icons/bs"
+import { HiOutlineTranslate } from "react-icons/hi"
 import Layout from "../../components/Layout"
 import slugify from "slugify"
 import SEO from "../../components/SEO"
@@ -40,27 +41,29 @@ const ExerciseTemplate = ({ data }) => {
               {/* icons below */}
               <div className="recipe-icons">
                 <article>
-                  <BsChatDots />
-                  <h5>中文動作名</h5>
+                  {/* <RiTranslate /> */}
+                  <HiOutlineTranslate />
+                  <h5>AKA</h5>
                   <p>{chineseName}</p>     
                 </article>
                 <article>
-                  <BsPeople />
+                  <BsFillPersonFill />
                   <h5>Contributor</h5>
                   <a href={contributorLink} target="_blank" rel="noopener noreferrer">
-                    {contributor}
+                    {`@${contributor}`}
                   </a>                
                 </article>
                 <article>
                   <BsGeo />
                   <h5>Venue</h5>
-                  <Link to={`/venues/${venueSlug}`}>
-                    { venue }
-                  </Link>                
+                  {/* <Link to={`/venues/${venueSlug}`}> */}
+                  <a href={venueLink} target="_blank" rel="noopener noreferrer">
+                    {`@${venue}`}
+                  </a>                
                 </article>
               </div>
               <p className="recipe-tags">
-                Tags : {tags.map((tag, index) => {
+                <BsTagFill /> : {tags.map((tag, index) => {
                   const slug = slugify(tag, { lower: true })
                   return (
                     <Link key={index} to={`/tags/${slug}`}>

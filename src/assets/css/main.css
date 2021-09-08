@@ -62,7 +62,7 @@
   --backgroundColor: var(--grey-0);
   --textColor: var(--grey-1000);
   --borderRadius: 0.25rem;
-  --letterSpacing: 1px;
+  --letterSpacing: 0px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
@@ -567,7 +567,7 @@ form > *:last-child {
   padding-bottom: 3rem;
 }
 .tags-container {
-  order: 1;
+  /* order: 1; */
   display: flex;
   flex-direction: column;
   /* background: blue; */
@@ -811,17 +811,14 @@ form > *:last-child {
   color: var(--primary-500);
   margin-bottom: 0;
 }
-
 .single-instruction header div {
   height: 1px;
   background: var(--grey-500);
 }
-
 .second-column {
   display: grid;
   row-gap: 2rem;
 }
-
 .single-ingredient {
   border-bottom: 1px solid var(--grey-500);
   padding-bottom: 0.75rem;

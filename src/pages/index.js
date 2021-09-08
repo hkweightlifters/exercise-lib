@@ -19,8 +19,8 @@ export default function Home() {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Exercise Library</h1>
-              <p>Contributed by Weightlifters in Hong Kong</p>
+              <h1>舉重手記</h1>
+              <p>Crowdsourced Exercise Videos by Weightlifters in Hong Kong</p>
             </div>
           </div>
         </header>

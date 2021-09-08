@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { BsGeo, BsPeople } from "react-icons/bs"
+import { BsGeo, BsFillPersonFill } from "react-icons/bs"
 import slugify from 'slugify'
 
 const ExercisesList = ({ exercises = [] }) => {
@@ -19,8 +19,8 @@ const ExercisesList = ({ exercises = [] }) => {
                 className="recipe-img"
                 alt={title} />
               <h5>{title}</h5>
-              <h5>{chineseName}</h5>
-              <p><BsPeople /> {contributor} | <BsGeo /> {venue}</p>
+              <p>{chineseName}</p>
+              <p><BsFillPersonFill /> {`@${contributor}`} | <BsGeo /> {`@${venue}`}</p>
             </Link>
           </div>
         )
