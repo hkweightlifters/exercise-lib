@@ -62,7 +62,7 @@
   --backgroundColor: var(--grey-0);
   --textColor: var(--grey-1000);
   --borderRadius: 0.25rem;
-  --letterSpacing: 0px;
+  --letterSpacing: 0  px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
@@ -766,7 +766,7 @@ form > *:last-child {
 }
 .recipe-icons a {
   font-size: 0.8em;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .recipe-tags {
   display: flex;
