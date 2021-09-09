@@ -545,13 +545,24 @@ form > *:last-child {
 .hero-text {
   color: var(--white);
   text-align: center;
+  max-width: 65vw;
+  line-height: normal;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
+  .hero-text {
+    max-width: 600px;
+  }
   .hero-text h1 {
     font-size: 4rem;
     margin-bottom: 0;
   }
+
 }
 
 /*#########*/
