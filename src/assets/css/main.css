@@ -545,12 +545,17 @@ form > *:last-child {
 .hero-text {
   color: var(--white);
   text-align: center;
-  max-width: 65vw;
+  max-width: 60vw;
   line-height: normal;
 }
 
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -560,7 +565,9 @@ form > *:last-child {
   }
   .hero-text h1 {
     font-size: 4rem;
-    margin-bottom: 0;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
   }
 
 }
